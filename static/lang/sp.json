@@ -1,0 +1,11 @@
+{
+  "lang": "sp",
+  "words": {
+    "enter_number_text": "Entra tu numero",
+    "enter_decimal_text": "Lugares decimales",
+    "enter_decimal_text_2": "El valor -1 elimina la restricción",
+    "result_button": "Obtener resultado",
+    "title": "Cálculo de raíz cuadrada"
+  }
+
+}

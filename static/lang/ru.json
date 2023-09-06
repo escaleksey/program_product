@@ -1,0 +1,12 @@
+
+{
+  "lang": "ru",
+  "words": {
+    "enter_number_text": "Введите число",
+    "enter_decimal_text": "Знаков после запятой",
+    "enter_decimal_text_2": "Значение -1 убирает ограничение по знакам",
+    "result_button": "Посчитать",
+    "title": "Вычисление корня"
+  }
+
+}

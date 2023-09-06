@@ -2,6 +2,7 @@ import sys
 from data.pages.main_page import *
 from data.logging import *
 
+
 def main():
     app = QApplication(sys.argv)
     window = MainWindow()

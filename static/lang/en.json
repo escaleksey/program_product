@@ -1,0 +1,11 @@
+{
+  "lang": "en",
+  "words": {
+    "enter_number_text": "Enter your number",
+    "enter_decimal_text": "Decimal places",
+    "enter_decimal_text_2": "Value -1 removes the restriction",
+    "result_button": "Get result",
+    "title": "Calculation Square Root"
+  }
+
+}

@@ -48,10 +48,10 @@
    <widget class="QSpinBox" name="decimal_places">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>169</y>
-      <width>41</width>
-      <height>21</height>
+      <x>183</x>
+      <y>171</y>
+      <width>38</width>
+      <height>18</height>
      </rect>
     </property>
     <property name="minimum">
@@ -67,9 +67,9 @@
    <widget class="QLabel" name="enter_decimal_text">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>170</y>
-      <width>121</width>
+      <x>21</x>
+      <y>171</y>
+      <width>151</width>
       <height>16</height>
      </rect>
     </property>
@@ -80,9 +80,9 @@
    <widget class="QLineEdit" name="output_number">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>180</x>
       <y>230</y>
-      <width>511</width>
+      <width>491</width>
       <height>20</height>
      </rect>
     </property>
@@ -99,9 +99,9 @@
    <widget class="QLabel" name="enter_decimal_text_2">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>170</y>
-      <width>201</width>
+      <x>260</x>
+      <y>171</y>
+      <width>176</width>
       <height>16</height>
      </rect>
     </property>
@@ -164,9 +164,9 @@
    <widget class="QLineEdit" name="input_number">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>180</x>
       <y>120</y>
-      <width>511</width>
+      <width>491</width>
       <height>20</height>
      </rect>
     </property>
@@ -179,7 +179,7 @@
      <rect>
       <x>20</x>
       <y>120</y>
-      <width>131</width>
+      <width>151</width>
       <height>16</height>
      </rect>
     </property>

@@ -1,0 +1,11 @@
+{
+  "lang": "ch",
+  "words": {
+    "enter_number_text": "输入电话号码",
+    "enter_decimal_text": "小数位",
+    "enter_decimal_text_2": "值 -1 删除限制",
+    "result_button": "得到结果",
+    "title": "计算平方根"
+  }
+
+}

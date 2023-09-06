@@ -9,25 +9,31 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>837</width>
-    <height>468</height>
+    <width>1107</width>
+    <height>647</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">font-size: 12px; background-color: white;</string>
+   <string notr="true">font-size: 14px; background-color: white;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="result_button">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>230</y>
-      <width>121</width>
-      <height>23</height>
+      <y>430</y>
+      <width>141</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat Medium</family>
+      <pointsize>-1</pointsize>
+     </font>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
@@ -48,11 +54,26 @@
    <widget class="QSpinBox" name="decimal_places">
     <property name="geometry">
      <rect>
-      <x>183</x>
-      <y>171</y>
-      <width>38</width>
-      <height>18</height>
+      <x>270</x>
+      <y>300</y>
+      <width>81</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat Medium</family>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">padding-left: 20px;</string>
     </property>
     <property name="minimum">
      <number>-1</number>
@@ -67,11 +88,17 @@
    <widget class="QLabel" name="enter_decimal_text">
     <property name="geometry">
      <rect>
-      <x>21</x>
-      <y>171</y>
-      <width>151</width>
-      <height>16</height>
+      <x>30</x>
+      <y>300</y>
+      <width>231</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat Medium</family>
+      <pointsize>-1</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Decimal places</string>
@@ -80,10 +107,10 @@
    <widget class="QLineEdit" name="output_number">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>230</y>
-      <width>491</width>
-      <height>20</height>
+      <x>270</x>
+      <y>420</y>
+      <width>661</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
@@ -99,11 +126,17 @@
    <widget class="QLabel" name="enter_decimal_text_2">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>171</y>
-      <width>411</width>
-      <height>16</height>
+      <x>390</x>
+      <y>290</y>
+      <width>611</width>
+      <height>51</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat Medium</family>
+      <pointsize>-1</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Value -1 removes the restriction</string>
@@ -112,8 +145,8 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>720</x>
-      <y>0</y>
+      <x>930</x>
+      <y>10</y>
       <width>81</width>
       <height>151</height>
      </rect>
@@ -164,10 +197,10 @@
    <widget class="QLineEdit" name="input_number">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>120</y>
-      <width>491</width>
-      <height>20</height>
+      <x>270</x>
+      <y>180</y>
+      <width>661</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="frame">
@@ -177,15 +210,61 @@
    <widget class="QLabel" name="enter_number_text">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>120</y>
-      <width>151</width>
-      <height>16</height>
+      <x>30</x>
+      <y>180</y>
+      <width>231</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat Medium</family>
+      <pointsize>-1</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Enter your number</string>
     </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>100</y>
+      <width>301</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat Medium</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(200, 200, 200); border: null; padding: 0 10px; </string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Арифметический</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Компексный</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Алгоритмический</string>
+     </property>
+    </item>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -193,8 +272,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>837</width>
-     <height>21</height>
+     <width>1107</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>

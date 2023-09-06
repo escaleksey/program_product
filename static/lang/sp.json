@@ -5,7 +5,10 @@
     "enter_decimal_text": "Lugares decimales",
     "enter_decimal_text_2": "El valor -1 elimina la restricción",
     "result_button": "Obtener resultado",
-    "title": "Cálculo de raíz cuadrada"
+    "title": "Cálculo de raíz cuadrada",
+    "comboBox1": "Aritmética",
+    "comboBox2": "Complejo",
+    "comboBox3": "Algorítmico"
   }
 
 }

@@ -20,13 +20,15 @@ class MainWindow(QMainWindow):
         self.ch.toggled.connect(self.onClicked)
         self.sp.toggled.connect(self.onClicked)
 
+
+
         self.translate()
-        # self.result_button.clicked.connect() # в скобки вписываешь функцию, которая будет работать на нажатие кнопки для вычисления
+        #self.result_button.clicked.connect() # в скобки вписываешь функцию, которая будет работать на нажатие кнопки для вычисления
         '''В self.input_number будет приходить значение пользователя,
             В self.output_number оно должно выводиться Это QLineEdit, погугли как брать текст из них и как вписывать
-            В decimal_places значение цифр после запятой, при -1 ограничение убирается QSpinBox погугли)
+            В self.decimal_places значение цифр после запятой, при -1 ограничение убирается QSpinBox погугли)
+            Комбобокс возвращает индекс self.comboBox
             '''
-
 
     def translate(self):  # перевод текста
         with open(f"static/lang/{CNF.LAST_LANGUAGE}.json", "r", encoding='UTF-8') as file:
@@ -36,6 +38,11 @@ class MainWindow(QMainWindow):
         self.enter_decimal_text.setText(self.lang_dict["words"]["enter_decimal_text"])
         self.enter_decimal_text_2.setText(self.lang_dict["words"]["enter_decimal_text_2"])
         self.result_button.setText(self.lang_dict["words"]["result_button"])
+        self.comboBox.clear()
+        self.comboBox.addItem(self.lang_dict["words"]["comboBox1"])
+        self.comboBox.addItem(self.lang_dict["words"]["comboBox2"])
+        self.comboBox.addItem(self.lang_dict["words"]["comboBox3"])
+
 
     def onClicked(self):  # запускается при выборе нового языка
         radioButton = self.sender()

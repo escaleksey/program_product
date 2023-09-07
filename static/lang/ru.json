@@ -1,15 +1,18 @@
 
 {
   "lang": "ru",
+  "name": "Русский",
   "words": {
     "enter_number_text": "Введите число",
     "enter_decimal_text": "Знаков после запятой",
-    "enter_decimal_text_2": "Значение -1 убирает ограничение по знакам",
+    "enter_decimal_text_2": "Убрать ограничение по знакам",
     "result_button": "Посчитать",
     "title": "Вычисление корня",
     "comboBox1": "Арифметический",
-    "comboBox2": "Алгебраический",
-    "comboBox3": "Комплексный"
+    "comboBox2": "Компексный",
+    "comboBox3": "Алгоритмический",
+    "apply_button": "Применить"
+
   }
 
 }

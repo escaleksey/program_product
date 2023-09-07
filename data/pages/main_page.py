@@ -1,54 +1,65 @@
 from PyQt5 import uic
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow
-
+from PyQt5 import QtCore
 import data.CONFIG as CNF
 from json import load
+from data.utils.language_utils import *
 
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
+
         uic.loadUi('static/ui/main_window.ui', self)  # Загружаем дизайн
+        self.list_languages = get_list_languages()
         self.initUi()
 
     def initUi(self):
         self.setWindowIcon(QIcon('static/images/icon.ico'))  # Иконка
-        self.check_lang()  # проверяем текущий язык
-        self.ru.toggled.connect(self.onClicked)  # подключаем radiobutton
-        self.en.toggled.connect(self.onClicked)
-        self.ch.toggled.connect(self.onClicked)
-        self.sp.toggled.connect(self.onClicked)
-
-
-
+        self.fill_lang_combobox()
         self.translate()
+        self.lang_combox.currentIndexChanged.connect(self.apply_settings)
+        self.reverse_button.clicked.connect(self.reverse)
+        self.check_language()
         #self.result_button.clicked.connect() # в скобки вписываешь функцию, которая будет работать на нажатие кнопки для вычисления
         '''В self.input_number будет приходить значение пользователя,
             В self.output_number оно должно выводиться Это QLineEdit, погугли как брать текст из них и как вписывать
             В self.decimal_places значение цифр после запятой, при -1 ограничение убирается QSpinBox погугли)
             Комбобокс возвращает индекс self.comboBox
             '''
+    def reverse(self):
+        before_lang = self.current_lang
+        self.list_languages = get_list_languages()
+        self.fill_lang_combobox()
+        self.current_lang = before_lang
+        CNF.LANGUAGE_JSON = self.current_lang
+        CNF.LAST_LANGUAGE = CNF.LANGUAGE_JSON
+        self.check_language()
+
+    def apply_settings(self):
+        self.current_lang = self.list_languages[self.lang_combox.currentIndex()]
+        self.change_lang()
+
+    def fill_lang_combobox(self):
+        self.lang_combox.clear()
+        names = get_names_of_languages()
+        for lang in names:
+            self.lang_combox.addItem(lang)
 
     def translate(self):  # перевод текста
+        print(CNF.LAST_LANGUAGE)
         with open(f"static/lang/{CNF.LAST_LANGUAGE}.json", "r", encoding='UTF-8') as file:
             self.lang_dict = load(file)
         self.setWindowTitle(self.lang_dict["words"]["title"])
         self.enter_number_text.setText(self.lang_dict["words"]["enter_number_text"])
         self.enter_decimal_text.setText(self.lang_dict["words"]["enter_decimal_text"])
-        self.enter_decimal_text_2.setText(self.lang_dict["words"]["enter_decimal_text_2"])
+        self.remove_limit.setText(self.lang_dict["words"]["enter_decimal_text_2"])
         self.result_button.setText(self.lang_dict["words"]["result_button"])
         self.comboBox.clear()
         self.comboBox.addItem(self.lang_dict["words"]["comboBox1"])
         self.comboBox.addItem(self.lang_dict["words"]["comboBox2"])
         self.comboBox.addItem(self.lang_dict["words"]["comboBox3"])
-
-
-    def onClicked(self):  # запускается при выборе нового языка
-        radioButton = self.sender()
-        if radioButton.isChecked():
-            self.current_lang = radioButton.objectName()
-            self.change_lang()
 
     def change_lang(self):
         CNF.LANGUAGE_JSON = self.current_lang
@@ -61,17 +72,6 @@ class MainWindow(QMainWindow):
         f.close()
         self.translate()
 
-    def check_lang(self):  # Делает радио кнопку выбранного языка активной
-        if CNF.LAST_LANGUAGE == 'ru':
-            self.ru.setChecked(True)
-            self.current_lang = 'ru'
-        elif CNF.LAST_LANGUAGE == 'en':
-            self.en.setChecked(True)
-            self.current_lang = 'en'
-        elif CNF.LAST_LANGUAGE == 'sp':
-            self.sp.setChecked(True)
-            self.current_lang = 'sp'
-        elif CNF.LAST_LANGUAGE == 'ch':
-            self.ch.setChecked(True)
-            self.current_lang = 'ch'
+    def check_language(self):
+        self.lang_combox.setCurrentIndex(self.list_languages.index(CNF.LAST_LANGUAGE))
 

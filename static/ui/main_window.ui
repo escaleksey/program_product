@@ -257,12 +257,12 @@
     </item>
     <item>
      <property name="text">
-      <string>Компексный</string>
+      <string>Алгебраический</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Алгоритмический</string>
+      <string>Комплексный</string>
      </property>
     </item>
    </widget>

@@ -24,7 +24,6 @@ class MainWindow(QMainWindow):
         self.lang_combox.currentIndexChanged.connect(self.apply_settings)
         self.reverse_button.clicked.connect(self.reverse)
         self.check_language()
-        #self.result_button.clicked.connect() # в скобки вписываешь функцию, которая будет работать на нажатие кнопки для вычисления
         '''В self.input_number будет приходить значение пользователя,
             В self.output_number оно должно выводиться Это QLineEdit, погугли как брать текст из них и как вписывать
             В self.decimal_places значение цифр после запятой, при -1 ограничение убирается QSpinBox погугли)

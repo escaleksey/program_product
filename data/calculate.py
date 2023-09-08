@@ -80,6 +80,9 @@ def result_calculate(UI):
         UI.output_number.setText("ERROR")
         return 0
 
+    if UI.remove_limit.checkState() == 2:
+        count_signs = -1
+
     output_string = parse_to_string(number.sqrt(), mode, count_signs)
     
     UI.output_number.setText(output_string)

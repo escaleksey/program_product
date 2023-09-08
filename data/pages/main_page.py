@@ -32,6 +32,9 @@ class MainWindow(QMainWindow):
         CNF.LANGUAGE_JSON = self.current_lang
         CNF.LAST_LANGUAGE = CNF.LANGUAGE_JSON
         self.check_language()
+        self.output_number1.setText("")
+        self.output_number2.setText("")
+        self.input_number.setText("")
 
     def apply_settings(self):
         self.current_lang = self.list_languages[self.lang_combox.currentIndex()]

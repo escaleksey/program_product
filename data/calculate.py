@@ -15,7 +15,7 @@ def parse_from_string(string):  # Комплексное число из стр�
                 return ComplexNumber(float(string), 0)
             else:
                 return ComplexNumber(0, float(string[:-1]))
-        except:
+        except Exception:
             return None   
 
     number1_string = string[:mark].strip()
@@ -33,8 +33,9 @@ def parse_from_string(string):  # Комплексное число из стр�
 
     try:
         return ComplexNumber(float(number1_string), float(number2_string[:-1]))
-    except:
+    except Exception:
         return None
+
 
 def pre_parse_number(number, count_signs):  # Функция для вывода с учётом количества знаков
     if count_signs == -1:
@@ -42,6 +43,7 @@ def pre_parse_number(number, count_signs):  # Функция для вывода
     if count_signs == 0:
         count_signs = None
     return str(round(float(number), count_signs))# Желательно переделать на что-то более стабильное
+
 
 def parse_to_string(numbers, mode, count_signs):    # Функция, которой на вход даётся список корней, а на выходе получается готовая строка с учётом установленного мода
     output = list()
@@ -59,8 +61,8 @@ def parse_to_string(numbers, mode, count_signs):    # Функция, котор
                     output.append(pre_parse_number(round(number.real, 14), count_signs) + " + " + pre_parse_number(round(number.imaginary, 14), count_signs) + "i")
     return output
 
+
 def result_calculate(UI):   # Выполняется при нажатии на кнопку в GUI
-    
     mode = UI.comboBox.currentIndex()
     count_signs = UI.decimal_places.value()
     input_string = UI.input_number.text()
@@ -73,6 +75,7 @@ def result_calculate(UI):   # Выполняется при нажатии на 
     
     if number == None:
         UI.output_number1.setText(UI.error_massage)
+        UI.output_number2.setText("")
         return 0
 
     if UI.remove_limit.checkState() == 2:

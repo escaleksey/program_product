@@ -10,7 +10,7 @@
     "comboBox1": "Aritmética",
     "comboBox2": "Algebraico",
     "comboBox3": "Complejo",
-    "apply_button": "Error"
+    "error": "Error"
   }
 
 }

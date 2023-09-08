@@ -79,7 +79,7 @@ def result_calculate(UI):   # Выполняется при нажатии на 
         return 0
 
     if (mode == 0 or mode == 1) and number.real < 0.0:
-        UI.output_number1.setText("Нет корня из отрицательного числа")
+        UI.output_number1.setText(UI.error_massage)
         UI.output_number2.setText("")
         return 0        
 

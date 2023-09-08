@@ -65,7 +65,7 @@ def parse_to_string(numbers, mode, count_signs):    # Функция, котор
 def result_calculate(UI):   # Выполняется при нажатии на кнопку в GUI
     mode = UI.comboBox.currentIndex()
     count_signs = UI.decimal_places.value()
-    input_string = UI.input_number.text()
+    input_string = UI.input_number.text().replace(',', '.')
 
     if len(input_string.strip()) == 0:
         UI.output_number1.setText("")

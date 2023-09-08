@@ -1,5 +1,6 @@
 from PyQt5 import uic
 from PyQt5.QtGui import QIcon
+from PyQt5 import QtCore
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 import data.CONFIG as CNF

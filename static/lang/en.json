@@ -9,7 +9,8 @@
     "title": "Calculation Square Root",
     "comboBox1": "Arithmetic",
     "comboBox2": "Algebraic",
-    "comboBox3": "Complex"
+    "comboBox3": "Complex",
+    "error": "Error"
   }
 
 }

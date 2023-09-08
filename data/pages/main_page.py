@@ -55,6 +55,7 @@ class MainWindow(QMainWindow):
         self.comboBox.addItem(self.lang_dict["words"]["comboBox1"])
         self.comboBox.addItem(self.lang_dict["words"]["comboBox2"])
         self.comboBox.addItem(self.lang_dict["words"]["comboBox3"])
+        self.error_massage = self.lang_dict["words"]["error"]
 
     def change_lang(self):
         CNF.LANGUAGE_JSON = self.current_lang

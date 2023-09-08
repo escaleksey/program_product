@@ -10,7 +10,8 @@
     "apply_button": "申请",
     "comboBox1": "算术",
     "comboBox2": "算法",
-    "comboBox3": "代数的"
+    "comboBox3": "代数的",
+    "error": "错误"
   }
 
 }

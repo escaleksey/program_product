@@ -75,7 +75,7 @@ def result_calculate(UI):
     number = parse_from_string(input_string)
     
     if number == None:
-        UI.output_number.setText("ERROR")
+        UI.output_number.setText(UI.error_massage)
         return 0
 
     if UI.remove_limit.checkState() == 2:

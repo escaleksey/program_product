@@ -1,3 +1,5 @@
+import os
+
 with open("static/lang/last_lang.txt", "r") as f:
     LANGUAGE_JSON = f.read()
 
@@ -7,3 +9,5 @@ def get_lang():
 
 
 LAST_LANGUAGE = get_lang()
+LANGUAGE_PATH = 'static/lang'
+

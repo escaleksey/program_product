@@ -1,10 +1,8 @@
-
 from data.complexnumber import *
 
-# Комплексное число из строки
-def parse_from_string(string):
-    string = string.strip()
 
+def parse_from_string(string):  # Комплексное число из строки
+    string = string.strip()
     mark = -1
     char = 0
     for i in range(len(string)):

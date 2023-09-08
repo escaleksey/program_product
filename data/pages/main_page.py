@@ -2,12 +2,11 @@ from PyQt5 import uic
 from PyQt5.QtGui import QIcon
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import QApplication, QMainWindow
-
 import data.CONFIG as CNF
 from json import load
 from data.utils.language_utils import *
-
 from data.calculate import *
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -24,11 +23,7 @@ class MainWindow(QMainWindow):
         self.lang_combox.currentIndexChanged.connect(self.apply_settings)
         self.reverse_button.clicked.connect(self.reverse)
         self.check_language()
-        '''В self.input_number будет приходить значение пользователя,
-            В self.output_number оно должно выводиться Это QLineEdit, погугли как брать текст из них и как вписывать
-            В self.decimal_places значение цифр после запятой, при -1 ограничение убирается QSpinBox погугли)
-            Комбобокс возвращает индекс self.comboBox
-            '''
+
     def reverse(self):
         before_lang = self.current_lang
         self.list_languages = get_list_languages()

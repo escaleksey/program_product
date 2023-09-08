@@ -1,19 +1,21 @@
 from math import *
 
+
 class ComplexNumber:
-    def __init__(self, real_part = 0.0, imaginary_part = 0.0):
+    def __init__(self, real_part=0.0, imaginary_part=0.0):
         self.real = real_part
         self.imaginary = imaginary_part
-    # Модуль комплексного числа
-    def magnitude(self):
+
+    def magnitude(self):  # Модуль комплексного числа
         return ((self.real**2) + (self.imaginary**2))**0.5
-    # Угол между вектором комплексного числа и осью X
-    def angle(self):
+
+    def angle(self):  # Угол между вектором комплексного числа и осью X
         return atan2(self.imaginary, self.real)
+
     def is_null(self):
         return (self.real == 0.0 and self.imaginary == 0.0)
-    # Квадратный корень комплексного числа
-    def sqrt(self):
+
+    def sqrt(self):  # Квадратный корень комплексного числа
         if self.is_null():
             return [ComplexNumber(0, 0)]
 

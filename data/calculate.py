@@ -9,11 +9,14 @@ def parse_from_string(string):  # Комплексное число из стр�
         if string[i] == '+' or string[i] == '-':
             char = string[i]
             mark = i
-    if mark == -1:
+    if mark <= 0:
         try:
-            return ComplexNumber(float(string), 0)
+            if string[-1] != 'i':
+                return ComplexNumber(float(string), 0)
+            else:
+                return ComplexNumber(0, float(string[:-1]))
         except:
-            return None
+            return None   
 
     number1_string = string[:mark].strip()
     number2_string = char+string[mark+1:].strip()
@@ -33,44 +36,38 @@ def parse_from_string(string):  # Комплексное число из стр�
     except:
         return None
 
-# Функция для вывода с учётом количества знаков
-def pre_parse_number(number, count_signs):
+def pre_parse_number(number, count_signs):  # Функция для вывода с учётом количества знаков
     if count_signs == -1:
         return str(float(number))
     if count_signs == 0:
         count_signs = None
     return str(round(float(number), count_signs))# Желательно переделать на что-то более стабильное
 
-# Функция, которой на вход даётся список корней, а на выходе получается готовая строка с учётом установленного мода
-def parse_to_string(numbers, mode, count_signs):
-    output = str()
+def parse_to_string(numbers, mode, count_signs):    # Функция, которой на вход даётся список корней, а на выходе получается готовая строка с учётом установленного мода
+    output = list()
     match mode:
         case 0:
-            output = pre_parse_number(numbers[0].real, count_signs)
+            output.append(pre_parse_number(numbers[0].real, count_signs))
         case 1:
             for number in numbers:
-                output += pre_parse_number(number.real, count_signs) + " | "
-            output = output[:-3]
+                output.append(pre_parse_number(number.real, count_signs))
         case 2:
-            output = str()
             for number in numbers:
                 if number.imaginary < 0.0:
-                    output += pre_parse_number(round(number.real, 14), count_signs) + " - " + pre_parse_number(round(number.imaginary, 14), count_signs)[1:] + "i" + " | "
+                    output.append(pre_parse_number(round(number.real, 14), count_signs) + " - " + pre_parse_number(round(number.imaginary, 14), count_signs)[1:] + "i")
                 else:
-                    output += pre_parse_number(round(number.real, 14), count_signs) + " + " + pre_parse_number(round(number.imaginary, 14), count_signs) + "i" + " | "
-            output = output[:-3]
-            
+                    output.append(pre_parse_number(round(number.real, 14), count_signs) + " + " + pre_parse_number(round(number.imaginary, 14), count_signs) + "i")
     return output
 
-# Выполняется при нажатии на кнопку в GUI
-def result_calculate(UI):
+def result_calculate(UI):   # Выполняется при нажатии на кнопку в GUI
     
     mode = UI.comboBox.currentIndex()
     count_signs = UI.decimal_places.value()
     input_string = UI.input_number.text()
 
     if len(input_string.strip()) == 0:
-        UI.output_number.setText("")
+        UI.output_number1.setText("")
+        UI.output_number2.setText("")
 
     number = parse_from_string(input_string)
     
@@ -81,7 +78,13 @@ def result_calculate(UI):
     if UI.remove_limit.checkState() == 2:
         count_signs = -1
 
-    output_string = parse_to_string(number.sqrt(), mode, count_signs)
+    output = parse_to_string(number.sqrt(), mode, count_signs)
+
+    print(output)
     
-    UI.output_number.setText(output_string)
+    UI.output_number1.setText(output[0])
+    if len(output) >= 2:
+        UI.output_number2.setText(output[1])
+    else:
+        UI.output_number2.setText("")
     return 1

@@ -254,7 +254,7 @@ QPushButton {background-color: lightgray; border-radius: 10px }</string>
      <string>CheckBox</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="output_number1_2">
+   <widget class="QLineEdit" name="output_number2">
     <property name="geometry">
      <rect>
       <x>620</x>

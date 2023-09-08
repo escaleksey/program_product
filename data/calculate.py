@@ -72,7 +72,11 @@ def result_calculate(UI):   # Выполняется при нажатии на 
     number = parse_from_string(input_string)
     
     if number == None:
+<<<<<<< HEAD
         UI.output_number1.setText("ERROR")
+=======
+        UI.output_number.setText(UI.error_massage)
+>>>>>>> origin/main
         return 0
 
     if UI.remove_limit.checkState() == 2:

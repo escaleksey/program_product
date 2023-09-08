@@ -80,7 +80,7 @@ QPushButton {background-color: lightgray; border-radius: 10px }</string>
      <number>0</number>
     </property>
     <property name="maximum">
-     <number>14</number>
+     <number>50</number>
     </property>
     <property name="value">
      <number>0</number>
@@ -105,12 +105,12 @@ QPushButton {background-color: lightgray; border-radius: 10px }</string>
      <string>Decimal places</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="output_number">
+   <widget class="QLineEdit" name="output_number1">
     <property name="geometry">
      <rect>
       <x>270</x>
       <y>420</y>
-      <width>661</width>
+      <width>301</width>
       <height>41</height>
      </rect>
     </property>
@@ -252,6 +252,25 @@ QPushButton {background-color: lightgray; border-radius: 10px }</string>
     </property>
     <property name="text">
      <string>CheckBox</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="output_number1_2">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>420</y>
+      <width>311</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
     </property>
    </widget>
   </widget>

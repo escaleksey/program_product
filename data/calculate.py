@@ -72,19 +72,13 @@ def result_calculate(UI):   # Выполняется при нажатии на 
     number = parse_from_string(input_string)
     
     if number == None:
-<<<<<<< HEAD
-        UI.output_number1.setText("ERROR")
-=======
-        UI.output_number.setText(UI.error_massage)
->>>>>>> origin/main
+        UI.output_number1.setText(UI.error_massage)
         return 0
 
     if UI.remove_limit.checkState() == 2:
         count_signs = -1
 
     output = parse_to_string(number.sqrt(), mode, count_signs)
-
-    print(output)
     
     UI.output_number1.setText(output[0])
     if len(output) >= 2:

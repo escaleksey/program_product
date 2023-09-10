@@ -7,7 +7,8 @@ from json import load
 import webbrowser
 from data.utils.language_utils import *
 from data.calculate import *
-
+import os
+import subprocess
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -56,7 +57,7 @@ class MainWindow(QMainWindow):
         self.enter_decimal_text.setText(self.lang_dict["words"]["enter_decimal_text"])
         self.remove_limit.setText(self.lang_dict["words"]["enter_decimal_text_2"])
         self.result_button.setText(self.lang_dict["words"]["result_button"])
-        self.help_button.setText(self.lang_dict["words"]["help_button"])
+       # self.help_button.setText(self.lang_dict["words"]["help_button"])
         self.comboBox.clear()
         self.comboBox.addItem(self.lang_dict["words"]["comboBox1"])
         self.comboBox.addItem(self.lang_dict["words"]["comboBox2"])

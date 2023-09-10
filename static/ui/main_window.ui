@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1107</width>
+    <width>1024</width>
     <height>647</height>
    </rect>
   </property>
@@ -55,9 +55,9 @@ QPushButton {background-color: lightgray; border-radius: 10px }</string>
    <widget class="QPushButton" name="help_button">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>30</y>
-      <width>181</width>
+      <x>950</x>
+      <y>10</y>
+      <width>41</width>
       <height>41</height>
      </rect>
     </property>
@@ -70,14 +70,27 @@ QPushButton {background-color: lightgray; border-radius: 10px }</string>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
+    <property name="toolTip">
+     <string>Support</string>
+    </property>
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #D6D6D6; border-radius: 10px </string>
+     <string notr="true">border:null; border-radius: 10px;</string>
     </property>
     <property name="text">
-     <string>Help</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../images/support.png</normaloff>../images/support.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
     </property>
     <property name="checkable">
      <bool>false</bool>
@@ -230,7 +243,7 @@ QPushButton {background-color: lightgray; border-radius: 10px }</string>
    <widget class="QComboBox" name="lang_combox">
     <property name="geometry">
      <rect>
-      <x>790</x>
+      <x>770</x>
       <y>10</y>
       <width>111</width>
       <height>41</height>
@@ -243,7 +256,7 @@ QPushButton {background-color: lightgray; border-radius: 10px }</string>
    <widget class="QPushButton" name="reverse_button">
     <property name="geometry">
      <rect>
-      <x>920</x>
+      <x>900</x>
       <y>10</y>
       <width>41</width>
       <height>41</height>
@@ -310,7 +323,7 @@ QPushButton {background-color: lightgray; border-radius: 10px }</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1107</width>
+     <width>1024</width>
      <height>25</height>
     </rect>
    </property>

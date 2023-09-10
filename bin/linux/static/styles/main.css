@@ -1,0 +1,14 @@
+QComboBox::drop-down {
+    border: null;
+    image: url('static/images/dropdown.png');
+    padding: 10% 10px;
+}
+
+QComboBox#comboBox::drop-down {
+    padding: 17% 10px;
+}
+
+
+QComboBox{
+    border: null;
+}

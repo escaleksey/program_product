@@ -1,0 +1,16 @@
+{
+  "lang": "sp",
+  "name": "Español",
+  "words": {
+    "enter_number_text": "Entra tu numero",
+    "enter_decimal_text": "Lugares decimales",
+    "enter_decimal_text_2": "Elimina la restricción",
+    "result_button": "Obtener resultado",
+    "title": "Cálculo de raíz cuadrada",
+    "comboBox1": "Aritmética",
+    "comboBox2": "Algebraico",
+    "comboBox3": "Complejo",
+    "error": "Error"
+  }
+
+}

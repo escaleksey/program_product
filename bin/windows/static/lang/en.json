@@ -1,0 +1,16 @@
+{
+  "lang": "en",
+  "name": "English",
+  "words": {
+    "enter_number_text": "Enter your number",
+    "enter_decimal_text": "Decimal places",
+    "enter_decimal_text_2": "Removes the decimal places limit",
+    "result_button": "Get result",
+    "title": "Calculation Square Root",
+    "comboBox1": "Arithmetic",
+    "comboBox2": "Algebraic",
+    "comboBox3": "Complex",
+    "error": "Error"
+  }
+
+}

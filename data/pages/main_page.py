@@ -4,6 +4,7 @@ from PyQt5 import QtCore
 from PyQt5.QtWidgets import QApplication, QMainWindow
 import data.CONFIG as CNF
 from json import load
+import webbrowser
 from data.utils.language_utils import *
 from data.calculate import *
 
@@ -20,6 +21,7 @@ class MainWindow(QMainWindow):
         self.fill_lang_combobox()
         self.translate()
         self.result_button.clicked.connect(lambda: result_calculate(self)) #Подключение функции калькулятора к кнопке
+        self.help_button.clicked.connect(lambda: webbrowser.open_new_tab("https://forms.gle/fb31XVoRkTgecBXQA")) #Техподдержка
         self.lang_combox.currentIndexChanged.connect(self.apply_settings)
         self.reverse_button.clicked.connect(self.reverse)
         self.check_language()
@@ -54,6 +56,7 @@ class MainWindow(QMainWindow):
         self.enter_decimal_text.setText(self.lang_dict["words"]["enter_decimal_text"])
         self.remove_limit.setText(self.lang_dict["words"]["enter_decimal_text_2"])
         self.result_button.setText(self.lang_dict["words"]["result_button"])
+        self.help_button.setText(self.lang_dict["words"]["help_button"])
         self.comboBox.clear()
         self.comboBox.addItem(self.lang_dict["words"]["comboBox1"])
         self.comboBox.addItem(self.lang_dict["words"]["comboBox2"])

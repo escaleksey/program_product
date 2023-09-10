@@ -52,6 +52,37 @@ QPushButton {background-color: lightgray; border-radius: 10px }</string>
      <bool>false</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="help_button">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat Medium</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #D6D6D6; border-radius: 10px </string>
+    </property>
+    <property name="text">
+     <string>Help</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
    <widget class="QSpinBox" name="decimal_places">
     <property name="geometry">
      <rect>

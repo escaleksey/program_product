@@ -8,4 +8,4 @@ Tested on Ubuntu 22.04 LTS using the Hyper-V program.
 
 To use the program, extract the files from the folder
 that corresponds to your operating system (windows or linux)
-to a folder convenient for you, then run the executable file "app".
+to a folder convenient for you, then run the executable file "SqrtCalc".

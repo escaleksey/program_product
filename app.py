@@ -10,6 +10,7 @@ def main():
     stream = QtCore.QTextStream(file)
     app.setStyleSheet(stream.readAll())
     window = MainWindow()
+    window.setFixedSize(1024, 768)
     window.show()
     sys.excepthook = exception_hook
     sys.exit(app.exec())
